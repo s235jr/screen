@@ -1,4 +1,4 @@
-public class Screen {
+public class Main {
 
     public static void main(String args[]) {
         String screenSize = "20 10";         //width, heigth
