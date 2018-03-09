@@ -1,25 +1,41 @@
 public class Screen {
-    int[][] screenFrame;
+    String[][] screenFrame;
+    //Cord screen;
 
-    Screen(CordofScreen screenSize) {
-        this.screenFrame = new int[screenSize.width][screenSize.heigth];
-        for (int i = 0; i < screenSize.width; i++) {
-            for (int k = 0; k < screenSize.heigth; k++) {
-                this.screenFrame[screenSize.width][screenSize.heigth] = 1;
+    Screen(Cord screen) {
+        this.screenFrame = new String[screen.width][screen.heigth];
+        for (int i = 0; i < screen.width; i++) {
+            for (int k = 0; k < screen.heigth; k++) {
+                this.screenFrame[i][k] = "*";
+                //System.out.println(this.screenFrame[i][k]); //dlaczego mi się nie printuje?
             }
         }
 
-        public String screenToString () {
-            String screenInString = "";
-            for (int i = 0; i < screenFrame.length; i++) {
-                for (int k = 0; k < screenFrame.length; k++) {
-                    screenInString += Integer.toString(this.screenFrame[i][k]);
-                }
-                screenInString = screenInString + '\n';
+        for (int i = 0; i < screen.width; i++) {
+            for (int k = 0; k < screen.heigth; k = k + screen.maxArrayIndeksOfHeigth) {
+                this.screenFrame[i][k] = "|";
             }
-            return screenInString;
         }
+        for (int i = 0; i < screen.width; i = i + screen.maxArrayIndeksOfWidth) {
+            for (int k = 0; k < screen.heigth; k++) {
+                this.screenFrame[i][k] = "-";
+            }
+        }
+        this.screenFrame[0][0] = "/";
+        this.screenFrame[0][screen.maxArrayIndeksOfHeigth] = "\\";
+        this.screenFrame[screen.maxArrayIndeksOfWidth][0] = "\\";
+        this.screenFrame[screen.maxArrayIndeksOfWidth][screen.maxArrayIndeksOfHeigth] = "/";
 
+    }
 
+    public String doString(Cord screen) {
+        String screenInString = "";
+        for (int i = 0; i < screen.width; i++) {
+            for (int k = 0; k < screen.heigth; k++) {
+                screenInString += this.screenFrame[i][k];
+            }
+            screenInString = screenInString + '\n';
+        }
+        return screenInString;
     }
 }
