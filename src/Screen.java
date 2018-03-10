@@ -1,37 +1,38 @@
 public class Screen {
-    String[][] screen;
+    public String[][] screen;
 
     Screen(Cord screenFrame) {
-        this.screen = new String[screenFrame.width][screenFrame.heigth];
-        for (int i = 0; i < screenFrame.width; i++) {
-            for (int k = 0; k < screenFrame.heigth; k++) {
+        this.screen = new String[screenFrame.heigth][screenFrame.width];
+        for (int i = 0; i < screenFrame.heigth; i++) {
+            for (int k = 0; k < screenFrame.width; k++) {
                 this.screen[i][k] = " ";
             }
         }
 
-        for (int i = 0; i < screenFrame.width; i++) {
-            for (int k = 0; k < screenFrame.heigth; k = k + screenFrame.maxArrayIndeksOfHeigth) {
+        for (int i = 0; i < screenFrame.heigth; i++) {
+            for (int k = 0; k < screenFrame.width; k = k + screenFrame.maxArrayIndeksOfWidth) {
                 this.screen[i][k] = "|";
             }
         }
-        for (int i = 0; i < screenFrame.width; i = i + screenFrame.maxArrayIndeksOfWidth) {
-            for (int k = 0; k < screenFrame.heigth; k++) {
+        for (int i = 0; i < screenFrame.heigth; i = i + screenFrame.maxArrayIndeksOfHeigth) {
+            for (int k = 0; k < screenFrame.width; k++) {
                 this.screen[i][k] = "-";
             }
         }
+
         this.screen[0][0] = "/";
-        this.screen[0][screenFrame.maxArrayIndeksOfHeigth] = "\\";
-        this.screen[screenFrame.maxArrayIndeksOfWidth][0] = "\\";
-        this.screen[screenFrame.maxArrayIndeksOfWidth][screenFrame.maxArrayIndeksOfHeigth] = "/";
+        this.screen[0][screenFrame.maxArrayIndeksOfWidth] = "\\";
+        this.screen[screenFrame.maxArrayIndeksOfHeigth][0] = "\\";
+        this.screen[screenFrame.maxArrayIndeksOfHeigth][screenFrame.maxArrayIndeksOfWidth] = "/";
     }
 
-    public String[][] generateReactangle(Reactangle valueForReactangle){
-        for (int i = valueForReactangle.xCord; i < valueForReactangle.width; i++) {
-            for (int k = valueForReactangle.yCord; k < valueForReactangle.heigth; k++) {
+    public void generateReactangle(String pointsOfReactangle) {
+        Reactangle valueForReactangle = new Reactangle(pointsOfReactangle);
+        for (int i = valueForReactangle.yCord; i < valueForReactangle.heigth + valueForReactangle.yCord; i++) {
+            for (int k = valueForReactangle.xCord; k < valueForReactangle.width + valueForReactangle.xCord; k++) {
                 this.screen[i][k] = "#";
             }
         }
-        return this.screen;
     }
 
     public String doString() {
