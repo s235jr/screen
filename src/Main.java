@@ -6,10 +6,10 @@ public class Main {
         String secondReactangle = "3 3 10 2";
         String amountOfReactangle = "2";
 
-        Cord screen = new Cord(screenSize);
-        Screen frameOfScreen = new Screen(screen);
-        System.out.println("Ramka ekranu: " + '\n' + frameOfScreen.doString(screen));
-
+        Cord valufeForFrame = new Cord(screenSize);
+        Screen frameOfScreen = new Screen(valufeForFrame);
+        System.out.println("Ramka ekranu: " + '\n' + frameOfScreen.doString());
+        Reactangle pointsOfReactagle = new Reactangle(firstReactangle);
 
     }
 }
