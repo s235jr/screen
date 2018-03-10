@@ -3,10 +3,6 @@ public class Cord {
     public int heigth;
     public int maxArrayIndeksOfWidth;
     public int maxArrayIndeksOfHeigth;
-    public int xCordOfReactangleCorner;
-    public int yCordOfReactangleCorner;
-
-    public int wwwww;
 
     Cord(String points) {
         String[] arrayOfScreenSize = points.split(" ");
@@ -14,7 +10,7 @@ public class Cord {
         this.heigth = Integer.parseInt(arrayOfScreenSize[1]);
         this.maxArrayIndeksOfWidth = width - 1;
         this.maxArrayIndeksOfHeigth = heigth - 1;
-        System.out.println("Wysokość ekranu: " + arrayOfScreenSize[0]);
-        System.out.println("Szerokość ekranu: " + arrayOfScreenSize[1]);
+        //System.out.println("Wysokość ekranu: " + arrayOfScreenSize[0]);
+        //System.out.println("Szerokość ekranu: " + arrayOfScreenSize[1]);
     }
 }
