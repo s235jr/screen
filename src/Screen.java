@@ -33,7 +33,7 @@ public class Screen {
             }
         }
     }
-    
+
     public void generateTriangle(String pointsOfTriangle) {
         Reactangle valueForTriangle = new Reactangle(pointsOfTriangle);
         for (int i = valueForTriangle.yCord; i < valueForTriangle.width + valueForTriangle.yCord; i++) {
