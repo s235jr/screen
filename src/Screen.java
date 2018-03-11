@@ -35,11 +35,28 @@ public class Screen {
         }
     }
 
+    public void generateTriangle(String pointsOfTriangle) {
+        Reactangle valueForTriangle = new Reactangle(pointsOfTriangle);
+        for (int i = valueForTriangle.xCord; i < valueForTriangle.width + valueForTriangle.xCord; i++) {
+            this.screen[valueForTriangle.yCord][i] = "#";
+        }
+        for (int i = valueForTriangle.yCord; i < valueForTriangle.heigth + valueForTriangle.yCord; i++) {
+            this.screen[i][valueForTriangle.xCord] = "#";
+        }
+        for (int i = valueForTriangle.yCord+1; i < valueForTriangle.heigth-1 + valueForTriangle.yCord; i++) {
+            for (int k = valueForTriangle.xCord+1; k < valueForTriangle.width-1 + valueForTriangle.xCord; k++) {
+                if (this.screen[i-1][k+1] == "#") {
+                    this.screen[i][k] = "#";
+                }
+            }
+        }
+    }
+
     public String doString() {
         String screenInString = "";
         for (int i = 0; i < screen.length; i++) {
             for (int k = 0; k < screen[i].length; k++) {
-                screenInString += this.screen[i][k];
+                screenInString += this.screen[i][k] + " ";
             }
             screenInString = screenInString + '\n';
         }
