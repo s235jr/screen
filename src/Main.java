@@ -1,6 +1,7 @@
 public class Main {
 
     public static void main(String args[]) {
+
         String screenSize = "20 10";         //width, heigth
         String firstReactangle = "12 1 6 2";  //firstCordOfCornet, secondCordOfCorner, width, heigth
         String secondReactangle = "4 6 4 2";

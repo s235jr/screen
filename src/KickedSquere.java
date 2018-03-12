@@ -1,4 +1,4 @@
-public class KickedSquere {
+public class KickedSquere{
     public int xCord;
     public int yCord;
     public int size;

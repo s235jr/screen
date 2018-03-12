@@ -28,7 +28,6 @@ public class Screen {
     public void generateReactangleOnScreen(String pointsOfReactangle) {
         Reactangle valueForReactangle = new Reactangle(pointsOfReactangle);
         valueForReactangle.generateReactangle(this.screen, pointsOfReactangle);
-
     }
 
     public void generateTriangleOnScreen(String pointsOfTriangle) {
@@ -36,7 +35,7 @@ public class Screen {
         valueForTriangle.generateTriangle(this.screen, pointsOfTriangle);
     }
 
-    public void generateKickedSquareOnScreen (String pointsOfKickedSquare){
+    public void generateKickedSquareOnScreen(String pointsOfKickedSquare) {
         KickedSquere valueForKickedSquare = new KickedSquere(pointsOfKickedSquare);
         valueForKickedSquare.generateKickedSquare(this.screen, pointsOfKickedSquare);
     }
