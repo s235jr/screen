@@ -30,11 +30,11 @@ public class Screen {
     }
 
     public void generateTriangleOnScreen(Screen screen, Triangle pointsOfTriangle) {
-        pointsOfTriangle.generateTriangle(this.screen, pointsOfTriangle);
+        pointsOfTriangle.generate(this.screen, pointsOfTriangle);
     }
 
     public void generateKickedSquareOnScreen(Screen screen, KickedSquere pointsOfKickedSquare) {
-        pointsOfKickedSquare.generateKickedSquare(this.screen, pointsOfKickedSquare);
+        pointsOfKickedSquare.generate(this.screen, pointsOfKickedSquare);
     }
 
     public String doString() {

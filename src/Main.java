@@ -8,7 +8,7 @@ public class Main {
         String triangle = "1 1 4 4"; //firstCordOfCornet, secondCordOfCorner, width, heigth
         String kickedSquere = "10 4 2"; //firstCordOfCenter, secondCordOfCenter, size
 
-        
+
         Cord valufeForFrame = new Cord(screenSize);
         Screen screen = new Screen(valufeForFrame);
         screen.generateReactangleOnScreen(screen, new Reactangle(firstReactangle));

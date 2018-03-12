@@ -12,12 +12,11 @@ public class Reactangle {
         this.heigth = Integer.parseInt(reactangle[2]);
     }
 
-    public String[][] generate(String[][] screen, Reactangle valueForReactangle) {
+    public void generate(String[][] screen, Reactangle valueForReactangle) {
         for (int i = valueForReactangle.xCord; i < valueForReactangle.width + valueForReactangle.xCord; i++) {
             for (int k = valueForReactangle.yCord; k < valueForReactangle.heigth + valueForReactangle.yCord; k++) {
                 screen[i][k] = "&";
             }
         }
-        return screen;
     }
 }

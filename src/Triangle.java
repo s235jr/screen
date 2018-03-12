@@ -12,7 +12,7 @@ public class Triangle {
         this.heigth = Integer.parseInt(reactangle[2]);
     }
 
-    public String[][] generateTriangle(String[][] screen, Triangle valueForTriangle) {
+    public void generate(String[][] screen, Triangle valueForTriangle) {
         for (int i = valueForTriangle.yCord; i < valueForTriangle.width + valueForTriangle.yCord; i++) {
             screen[valueForTriangle.xCord][i] = "#";
         }
@@ -26,6 +26,5 @@ public class Triangle {
                 }
             }
         }
-        return screen;
     }
 }
