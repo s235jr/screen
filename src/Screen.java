@@ -25,43 +25,21 @@ public class Screen {
         this.screen[screenFrame.maxArrayIndeksOfWidth][screenFrame.maxArrayIndeksOfHeigth] = "/";
     }
 
-    public void generateReactangle(String pointsOfReactangle) {
+    public void generateReactangleOnScreen(String pointsOfReactangle) {
         Reactangle valueForReactangle = new Reactangle(pointsOfReactangle);
-        for (int i = valueForReactangle.xCord; i < valueForReactangle.width + valueForReactangle.xCord; i++) {
-            for (int k = valueForReactangle.yCord; k < valueForReactangle.heigth + valueForReactangle.yCord; k++) {
-                this.screen[i][k] = "@";
-            }
-        }
+        valueForReactangle.generateReactangle(this.screen, pointsOfReactangle);
+
     }
 
-    public void generateTriangle(String pointsOfTriangle) {
-        Reactangle valueForTriangle = new Reactangle(pointsOfTriangle);
-        for (int i = valueForTriangle.yCord; i < valueForTriangle.width + valueForTriangle.yCord; i++) {
-            this.screen[valueForTriangle.xCord][i] = "#";
-        }
-        for (int i = valueForTriangle.xCord; i < valueForTriangle.heigth + valueForTriangle.xCord; i++) {
-            this.screen[i][valueForTriangle.yCord] = "#";
-        }
-        for (int i = valueForTriangle.xCord + 1; i < valueForTriangle.width - 1 + valueForTriangle.xCord; i++) {
-            for (int k = valueForTriangle.yCord + 1; k < valueForTriangle.heigth - 1 + valueForTriangle.yCord; k++) {
-                if (this.screen[i - 1][k + 1] == "#") {
-                    this.screen[i][k] = "#";
-                }
-            }
-        }
+    public void generateTriangleOnScreen(String pointsOfTriangle) {
+        Triangle valueForTriangle = new Triangle(pointsOfTriangle);
+        valueForTriangle.generateTriangle(this.screen, pointsOfTriangle);
     }
 
-    public void generateKickedSquare (String pointsOfKickedSquare){
+    public void generateKickedSquareOnScreen (String pointsOfKickedSquare){
         KickedSquere valueForKickedSquare = new KickedSquere(pointsOfKickedSquare);
-        for(int i = valueForKickedSquare.xCord - valueForKickedSquare.size; i < valueForKickedSquare.xCord+valueForKickedSquare.size+1; i++){
-            this.screen[i][valueForKickedSquare.yCord] = "$";
-        }
-        for(int i = valueForKickedSquare.yCord - valueForKickedSquare.size; i < valueForKickedSquare.yCord+valueForKickedSquare.size+1; i++){
-            this.screen[valueForKickedSquare.xCord][i] = "$";
-        }
+        valueForKickedSquare.generateKickedSquare(this.screen, pointsOfKickedSquare);
     }
-
-
 
     public String doString() {
         String screenInString = "";

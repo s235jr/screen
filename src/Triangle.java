@@ -15,4 +15,22 @@ public class Triangle {
         //System.out.println("Trójkąt - szerokość: " + reactangle[2]);
         //System.out.println("Trójkąt - wysokość: " + reactangle[3]);
     }
+
+    public String[][] generateTriangle(String[][] screen, String pointsOfTriangle) {
+        Reactangle valueForTriangle = new Reactangle(pointsOfTriangle);
+        for (int i = valueForTriangle.yCord; i < valueForTriangle.width + valueForTriangle.yCord; i++) {
+            screen[valueForTriangle.xCord][i] = "#";
+        }
+        for (int i = valueForTriangle.xCord; i < valueForTriangle.heigth + valueForTriangle.xCord; i++) {
+            screen[i][valueForTriangle.yCord] = "#";
+        }
+        for (int i = valueForTriangle.xCord + 1; i < valueForTriangle.width - 1 + valueForTriangle.xCord; i++) {
+            for (int k = valueForTriangle.yCord + 1; k < valueForTriangle.heigth - 1 + valueForTriangle.yCord; k++) {
+                if (screen[i - 1][k + 1] == "#") {
+                    screen[i][k] = "#";
+                }
+            }
+        }
+        return screen;
+    }
 }
