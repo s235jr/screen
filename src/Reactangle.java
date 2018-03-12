@@ -10,14 +10,9 @@ public class Reactangle {
         this.yCord = Integer.parseInt(reactangle[0]);
         this.width = Integer.parseInt(reactangle[3]);
         this.heigth = Integer.parseInt(reactangle[2]);
-        //System.out.println("Prostokąt - współrzedna X: " + reactangle[0]);
-        //System.out.println("Prostokąt - współrzedna Y: " + reactangle[1]);
-        //System.out.println("Prostokąt - szerokość: " + reactangle[2]);
-        //System.out.println("Prostokąt - wysokość: " + reactangle[3]);
     }
 
-    public String[][] generateReactangle(String[][] screen, String pointsOfReactan) {
-        Reactangle valueForReactangle = new Reactangle(pointsOfReactangle);
+    public String[][] generate(String[][] screen, Reactangle valueForReactangle) {
         for (int i = valueForReactangle.xCord; i < valueForReactangle.width + valueForReactangle.xCord; i++) {
             for (int k = valueForReactangle.yCord; k < valueForReactangle.heigth + valueForReactangle.yCord; k++) {
                 screen[i][k] = "&";

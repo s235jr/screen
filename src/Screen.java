@@ -25,19 +25,16 @@ public class Screen {
         this.screen[screenFrame.maxArrayIndeksOfWidth][screenFrame.maxArrayIndeksOfHeigth] = "/";
     }
 
-    public void generateReactangleOnScreen(String pointsOfReactangle) {
-        //Reactangle valueForReactangle = new Reactangle(pointsOfReactangle);
-        valueForReactangle.generateReactangle(this.screen, pointsOfReactangle);
+    public void generateReactangleOnScreen(Screen screen, Reactangle pointsOfReactangle) {
+        pointsOfReactangle.generate(this.screen, pointsOfReactangle);
     }
 
-    public void generateTriangleOnScreen(String pointsOfTriangle) {
-        //Triangle valueForTriangle = new Triangle(pointsOfTriangle);
-        valueForTriangle.generateTriangle(this.screen, pointsOfTriangle);
+    public void generateTriangleOnScreen(Screen screen, Triangle pointsOfTriangle) {
+        pointsOfTriangle.generateTriangle(this.screen, pointsOfTriangle);
     }
 
-    public void generateKickedSquareOnScreen(String pointsOfKickedSquare) {
-        //KickedSquere valueForKickedSquare = new KickedSquere(pointsOfKickedSquare);
-        valueForKickedSquare.generateKickedSquare(this.screen, pointsOfKickedSquare);
+    public void generateKickedSquareOnScreen(Screen screen, KickedSquere pointsOfKickedSquare) {
+        pointsOfKickedSquare.generateKickedSquare(this.screen, pointsOfKickedSquare);
     }
 
     public String doString() {

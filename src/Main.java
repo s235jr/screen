@@ -7,14 +7,14 @@ public class Main {
         String secondReactangle = "4 6 4 2";
         String triangle = "1 1 4 4"; //firstCordOfCornet, secondCordOfCorner, width, heigth
         String kickedSquere = "10 4 2"; //firstCordOfCenter, secondCordOfCenter, size
-        //String amountOfReactangle = "2";
 
+        
         Cord valufeForFrame = new Cord(screenSize);
         Screen screen = new Screen(valufeForFrame);
-        screen.generateReactangleOnScreen(firstReactangle);
-        screen.generateReactangleOnScreen(secondReactangle);
-        screen.generateTriangleOnScreen(triangle);
-        screen.generateKickedSquareOnScreen(kickedSquere);
+        screen.generateReactangleOnScreen(screen, new Reactangle(firstReactangle));
+        screen.generateReactangleOnScreen(screen, new Reactangle(secondReactangle));
+        screen.generateTriangleOnScreen(screen, new Triangle(triangle));
+        screen.generateKickedSquareOnScreen(screen, new KickedSquere(kickedSquere));
         System.out.println(screen.doString());
 
 

@@ -10,14 +10,9 @@ public class Triangle {
         this.yCord = Integer.parseInt(reactangle[0]);
         this.width = Integer.parseInt(reactangle[3]);
         this.heigth = Integer.parseInt(reactangle[2]);
-        //System.out.println("Trójkąt - współrzedna X: " + reactangle[0]);
-        //System.out.println("Trójkąt - współrzedna Y: " + reactangle[1]);
-        //System.out.println("Trójkąt - szerokość: " + reactangle[2]);
-        //System.out.println("Trójkąt - wysokość: " + reactangle[3]);
     }
 
-    public String[][] generateTriangle(String[][] screen, String pointsOfTriangle) {
-        Reactangle valueForTriangle = new Reactangle(pointsOfTriangle);
+    public String[][] generateTriangle(String[][] screen, Triangle valueForTriangle) {
         for (int i = valueForTriangle.yCord; i < valueForTriangle.width + valueForTriangle.yCord; i++) {
             screen[valueForTriangle.xCord][i] = "#";
         }
