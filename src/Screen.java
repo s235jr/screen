@@ -25,15 +25,15 @@ public class Screen {
         this.screen[screenFrame.maxArrayIndeksOfWidth][screenFrame.maxArrayIndeksOfHeigth] = "/";
     }
 
-    public void generateReactangleOnScreen(Reactangle pointsOfReactangle) {
+    public void DrawIt(Reactangle pointsOfReactangle) {
         pointsOfReactangle.generate(this.screen, pointsOfReactangle);
     }
 
-    public void generateTriangleOnScreen(Triangle pointsOfTriangle) {
+    public void DrawIt(Triangle pointsOfTriangle) {
         pointsOfTriangle.generate(this.screen, pointsOfTriangle);
     }
 
-    public void generateKickedSquareOnScreen(KickedSquere pointsOfKickedSquare) {
+    public void DrawIt(KickedSquere pointsOfKickedSquare) {
         pointsOfKickedSquare.generate(this.screen, pointsOfKickedSquare);
     }
 

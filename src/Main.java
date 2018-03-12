@@ -11,10 +11,10 @@ public class Main {
 
         Cord valufeForFrame = new Cord(screenSize);
         Screen screen = new Screen(valufeForFrame);
-        screen.generateReactangleOnScreen(new Reactangle(firstReactangle));
-        screen.generateReactangleOnScreen(new Reactangle(secondReactangle));
-        screen.generateTriangleOnScreen(new Triangle(triangle));
-        screen.generateKickedSquareOnScreen(new KickedSquere(kickedSquere));
+        screen.DrawIt(new Reactangle(firstReactangle));
+        screen.DrawIt(new Reactangle(secondReactangle));
+        screen.DrawIt(new Triangle(triangle));
+        screen.DrawIt(new KickedSquere(kickedSquere));
         System.out.println(screen.doString());
 
 
