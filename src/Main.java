@@ -16,5 +16,8 @@ public class Main {
         screen.generateTriangleOnScreen(triangle);
         screen.generateKickedSquareOnScreen(kickedSquere);
         System.out.println(screen.doString());
+
+
+
     }
 }

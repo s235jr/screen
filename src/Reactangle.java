@@ -16,7 +16,7 @@ public class Reactangle {
         //System.out.println("Prostokąt - wysokość: " + reactangle[3]);
     }
 
-    public String[][] generateReactangle(String[][] screen, String pointsOfReactangle) {
+    public String[][] generateReactangle(String[][] screen, String pointsOfReactan) {
         Reactangle valueForReactangle = new Reactangle(pointsOfReactangle);
         for (int i = valueForReactangle.xCord; i < valueForReactangle.width + valueForReactangle.xCord; i++) {
             for (int k = valueForReactangle.yCord; k < valueForReactangle.heigth + valueForReactangle.yCord; k++) {
