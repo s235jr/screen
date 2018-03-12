@@ -51,6 +51,18 @@ public class Screen {
         }
     }
 
+    public void generateKickedSquare (String pointsOfKickedSquare){
+        KickedSquere valueForKickedSquare = new KickedSquere(pointsOfKickedSquare);
+        for(int i = valueForKickedSquare.xCord - valueForKickedSquare.size; i < valueForKickedSquare.xCord+valueForKickedSquare.size+1; i++){
+            this.screen[i][valueForKickedSquare.yCord] = "$";
+        }
+        for(int i = valueForKickedSquare.yCord - valueForKickedSquare.size; i < valueForKickedSquare.yCord+valueForKickedSquare.size+1; i++){
+            this.screen[valueForKickedSquare.xCord][i] = "$";
+        }
+    }
+
+
+
     public String doString() {
         String screenInString = "";
         for (int i = 0; i < screen.length; i++) {
