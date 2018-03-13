@@ -3,20 +3,20 @@ public class Main {
     public static void main(String args[]) {
 
         String screenSize = "20 10";         //width, heigth
-        String firstReactangle = "12 1 6 2";  //firstCordOfCornet, secondCordOfCorner, width, heigth
-        String secondReactangle = "4 6 4 2";
+        String firstReactangle = "12 2 6 3";  //firstCordOfCornet, secondCordOfCorner, width, heigth
+        String secondReactangle = "2 6 4 2";
         String triangle = "1 1 4 4"; //firstCordOfCornet, secondCordOfCorner, width, heigth
-        String kickedSquere = "10 4 2"; //firstCordOfCenter, secondCordOfCenter, size
+        String kickedSquere = "7 4 3"; //firstCordOfCenter, secondCordOfCenter, size
 
 
         Screen screen = new Screen(new Cord(screenSize));
-        //screen.DrawIt(new Reactangle(firstReactangle));
-        //screen.DrawIt(new Reactangle(secondReactangle));
-        //screen.DrawIt(new Triangle(triangle));
-        //screen.DrawIt(new KickedSquere(kickedSquere));
+        screen.DrawIt(new Reactangle(firstReactangle));
+        screen.DrawIt(new BetterReactangle(secondReactangle));
+        screen.DrawIt(new Triangle(triangle));
+        screen.DrawIt(new KickedSquere(kickedSquere));
 
-        Reactangle zmienna = new Reactangle(firstReactangle);
-        screen.DrawIt(zmienna);
+        //Figure zmienna = new Reactangle(firstReactangle);
+        //screen.DrawIt(zmienna);
 
         System.out.println(screen.doString());
 

@@ -1,4 +1,4 @@
-public class KickedSquere extends Figure{
+public class KickedSquere implements Figure{
     public int xCord;
     public int yCord;
     public int size;

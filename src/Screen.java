@@ -5,7 +5,7 @@ public class Screen {
         this.screen = new String[screenFrame.width][screenFrame.heigth];
         for (int i = 0; i < screenFrame.width; i++) {
             for (int k = 0; k < screenFrame.heigth; k++) {
-                this.screen[i][k] = "*";
+                this.screen[i][k] = " ";
             }
         }
 

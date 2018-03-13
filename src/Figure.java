@@ -1,8 +1,8 @@
-public class Figure {
+public interface Figure {
 
-    public void generate(String[][] screen) {
+    public void generate(String[][] screen);
 
-    }
+
 }
 
 
