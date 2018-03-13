@@ -1,4 +1,4 @@
-public class KickedSquere {
+public class KickedSquere extends Figure{
     public int xCord;
     public int yCord;
     public int size;
@@ -10,12 +10,12 @@ public class KickedSquere {
         this.size = Integer.parseInt(kickedSquare[2]);
     }
 
-    public void generate(String[][] screen, KickedSquere valueForKickedSquare) {
-        for (int i = valueForKickedSquare.xCord - valueForKickedSquare.size; i < valueForKickedSquare.xCord + valueForKickedSquare.size + 1; i++) {
-            screen[i][valueForKickedSquare.yCord] = "$";
+    public void generate(String[][] screen) {
+        for (int i = this.xCord - this.size; i < this.xCord + this.size + 1; i++) {
+            screen[i][this.yCord] = "$";
         }
-        for (int i = valueForKickedSquare.yCord - valueForKickedSquare.size; i < valueForKickedSquare.yCord + valueForKickedSquare.size + 1; i++) {
-            screen[valueForKickedSquare.xCord][i] = "$";
+        for (int i = this.yCord - this.size; i < this.yCord + this.size + 1; i++) {
+            screen[this.xCord][i] = "$";
         }
     }
 }

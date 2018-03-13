@@ -9,12 +9,15 @@ public class Main {
         String kickedSquere = "10 4 2"; //firstCordOfCenter, secondCordOfCenter, size
 
 
-        Cord valufeForFrame = new Cord(screenSize);
-        Screen screen = new Screen(valufeForFrame);
-        screen.DrawIt(new Reactangle(firstReactangle));
-        screen.DrawIt(new Reactangle(secondReactangle));
-        screen.DrawIt(new Triangle(triangle));
-        screen.DrawIt(new KickedSquere(kickedSquere));
+        Screen screen = new Screen(new Cord(screenSize));
+        //screen.DrawIt(new Reactangle(firstReactangle));
+        //screen.DrawIt(new Reactangle(secondReactangle));
+        //screen.DrawIt(new Triangle(triangle));
+        //screen.DrawIt(new KickedSquere(kickedSquere));
+        screen.generate(new Reactangle(firstReactangle));
+        screen.generate(new Reactangle(secondReactangle));
+        screen.generate(new Triangle(triangle));
+        screen.generate(new KickedSquere(kickedSquere));
         System.out.println(screen.doString());
 
 

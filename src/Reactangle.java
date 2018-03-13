@@ -1,4 +1,4 @@
-public class Reactangle {
+public class Reactangle extends Figure {
     public int xCord;
     public int yCord;
     public int width;
@@ -12,9 +12,9 @@ public class Reactangle {
         this.heigth = Integer.parseInt(reactangle[2]);
     }
 
-    public void generate(String[][] screen, Reactangle valueForReactangle) {
-        for (int i = valueForReactangle.xCord; i < valueForReactangle.width + valueForReactangle.xCord; i++) {
-            for (int k = valueForReactangle.yCord; k < valueForReactangle.heigth + valueForReactangle.yCord; k++) {
+    public void generate(String[][] screen) {
+        for (int i = this.xCord; i < this.width + this.xCord; i++) {
+            for (int k = this.yCord; k < this.heigth + this.yCord; k++) {
                 screen[i][k] = "&";
             }
         }

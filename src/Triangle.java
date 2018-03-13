@@ -1,4 +1,4 @@
-public class Triangle {
+public class Triangle extends Figure {
     public int xCord;
     public int yCord;
     public int width;
@@ -12,15 +12,15 @@ public class Triangle {
         this.heigth = Integer.parseInt(reactangle[2]);
     }
 
-    public void generate(String[][] screen, Triangle valueForTriangle) {
-        for (int i = valueForTriangle.yCord; i < valueForTriangle.width + valueForTriangle.yCord; i++) {
-            screen[valueForTriangle.xCord][i] = "#";
+    public void generate(String[][] screen) {
+        for (int i = this.yCord; i < this.width + this.yCord; i++) {
+            screen[this.xCord][i] = "#";
         }
-        for (int i = valueForTriangle.xCord; i < valueForTriangle.heigth + valueForTriangle.xCord; i++) {
-            screen[i][valueForTriangle.yCord] = "#";
+        for (int i = this.xCord; i < this.heigth + this.xCord; i++) {
+            screen[i][this.yCord] = "#";
         }
-        for (int i = valueForTriangle.xCord + 1; i < valueForTriangle.width - 1 + valueForTriangle.xCord; i++) {
-            for (int k = valueForTriangle.yCord + 1; k < valueForTriangle.heigth - 1 + valueForTriangle.yCord; k++) {
+        for (int i = this.xCord + 1; i < this.width - 1 + this.xCord; i++) {
+            for (int k = this.yCord + 1; k < this.heigth - 1 + this.yCord; k++) {
                 if (screen[i - 1][k + 1] == "#") {
                     screen[i][k] = "#";
                 }
