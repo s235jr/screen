@@ -11,7 +11,7 @@ public class Reactangle extends Figure {
         this.width = Integer.parseInt(reactangle[3]);
         this.heigth = Integer.parseInt(reactangle[2]);
     }
-
+    @Override
     public void generate(String[][] screen) {
         for (int i = this.xCord; i < this.width + this.xCord; i++) {
             for (int k = this.yCord; k < this.heigth + this.yCord; k++) {

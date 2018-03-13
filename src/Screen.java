@@ -25,23 +25,10 @@ public class Screen {
         this.screen[screenFrame.maxArrayIndeksOfWidth][screenFrame.maxArrayIndeksOfHeigth] = "/";
     }
 
-    public void generate(Figure pointsOfFigure) {
+    public void DrawIt(Figure pointsOfFigure) {
         pointsOfFigure.generate(this.screen);
     }
 
-    /*
-        public void DrawIt(Reactangle pointsOfReactangle) {
-            pointsOfReactangle.generate(this.screen);
-        }
-
-        public void DrawIt(Triangle pointsOfTriangle) {
-            pointsOfTriangle.generate(this.screen);
-        }
-
-        public void DrawIt(KickedSquere pointsOfKickedSquare) {
-            pointsOfKickedSquare.generate(this.screen);
-        }
-    */
     public String doString() {
         String screenInString = "";
         for (int i = 0; i < screen.length; i++) {
