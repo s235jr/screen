@@ -13,7 +13,8 @@ public class Reactangle implements Figure {
         this.heigth = Integer.parseInt(reactangle[2]);
         this.sign = "&";
     }
-        public void generate(String[][] screen) {
+
+    public void generate(String[][] screen) {
         for (int i = this.xCord; i < this.width + this.xCord; i++) {
             for (int k = this.yCord; k < this.heigth + this.yCord; k++) {
                 screen[i][k] = sign;

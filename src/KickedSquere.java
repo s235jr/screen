@@ -1,4 +1,4 @@
-public class KickedSquere implements Figure{
+public class KickedSquere implements Figure {
     public int xCord;
     public int yCord;
     public int size;
@@ -11,11 +11,11 @@ public class KickedSquere implements Figure{
     }
 
     public void generate(String[][] screen) {
-        for (int i = this.xCord - this.size; i < this.xCord + this.size + 1; i++) {
-            screen[i][this.yCord] = "$";
-        }
-        for (int i = this.yCord - this.size; i < this.yCord + this.size + 1; i++) {
-            screen[this.xCord][i] = "$";
+        for (int i = 0; i < this.size + 1; i++) {
+            for (int k = this.xCord - this.size + i; k < this.xCord + this.size + 1 - i; k++) {
+                screen[k][this.yCord - i] = "8";
+                screen[k][this.yCord + i] = "8";
+            }
         }
     }
 }

@@ -10,7 +10,5 @@ public class Cord {
         this.heigth = Integer.parseInt(arrayOfScreenSize[0]);
         this.maxArrayIndeksOfWidth = width - 1;
         this.maxArrayIndeksOfHeigth = heigth - 1;
-        //System.out.println("Wysokość ekranu: " + arrayOfScreenSize[0]);
-        //System.out.println("Szerokość ekranu: " + arrayOfScreenSize[1]);
     }
 }
