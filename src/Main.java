@@ -5,7 +5,7 @@ public class Main {
         String screenSize = "20 10";         //width, heigth
         String firstReactangle = "12 2 6 3";  //firstCordOfCornet, secondCordOfCorner, width, heigth
         String secondReactangle = "2 6 4 2";
-        String triangle = "2 2 3"; //firstCordOfCornet, secondCordOfCorner, size
+        String triangle = "1 1 4"; //firstCordOfCornet, secondCordOfCorner, size
         String kickedSquere = "7 4 2"; //firstCordOfCenter, secondCordOfCenter, size
 
         Screen screen = new Screen(new Cord(screenSize));
